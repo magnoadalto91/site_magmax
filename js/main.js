@@ -131,7 +131,7 @@
     const email = document.getElementById('cfEmail').value.trim();
     const msg = document.getElementById('cfMsg').value.trim();
     const body = encodeURIComponent(`${msg}\n\n— ${nome} (${email})`);
-    window.location.href = `mailto:contato@magmaxsystems.com.br?subject=${encodeURIComponent(
+    window.location.href = `mailto:atendimento@magmax.dev.br?subject=${encodeURIComponent(
       'Contato via site — ' + nome
     )}&body=${body}`;
   });
