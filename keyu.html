@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Keyu — Magmax Systems</title>
+<meta name="description" content="Keyu: plataforma gamificada de estudos para concursos públicos, criada e operada pela Magmax Systems." />
+<meta name="theme-color" content="#050a16" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2308080a'/%3E%3Cpath d='M20 78V22l30 34 30-34v56' stroke='%23ff7a1a' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<canvas id="circuitBg"></canvas>
+
+<svg class="noise-defs" width="0" height="0">
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter>
+</svg>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav id="nav" class="nav-solid">
+  <a href="index.html" class="nav-logo" data-cursor>
+    <svg viewBox="0 0 100 100" width="26" height="26"><path d="M20 78V22l30 34 30-34v56" stroke="#ff7a1a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>MAGMAX<em>SYSTEMS</em></span>
+  </a>
+  <div class="nav-links">
+    <a href="sobre.html" data-cursor>Sobre</a>
+    <a href="produtos.html" data-cursor>Produtos</a>
+    <a href="servicos.html" data-cursor>Serviços</a>
+    <a href="contato.html" data-cursor>Contato</a>
+  </div>
+  <a href="contato.html" class="nav-cta" data-cursor>Fale com a gente</a>
+  <button class="nav-burger" id="navBurger" aria-label="Abrir menu">
+    <span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="sobre.html" data-cursor>Sobre</a>
+  <a href="produtos.html" data-cursor>Produtos</a>
+  <a href="servicos.html" data-cursor>Serviços</a>
+  <a href="contato.html" data-cursor>Contato</a>
+</div>
+
+<main>
+  <section class="section products" style="padding-top:clamp(7rem,13vw,10rem)">
+    <div class="section-inner" style="margin-bottom:1rem">
+      <div class="sec-tag reveal"><a href="produtos.html" style="color:inherit" data-cursor>Produtos</a></div>
+    </div>
+
+    <article class="product-block" style="border-top:none;padding-top:0" id="keyu">
+      <div class="section-inner product-grid">
+        <div class="product-copy reveal">
+          <div class="product-tag keyu-tag">EdTech · App gamificado</div>
+          <h3 class="product-title">Keyu</h3>
+          <p class="product-desc">
+            Plataforma gamificada de estudos para concursos públicos. Trilhas por matéria, sistema de vidas,
+            simulados cronometrados, flash cards e um mascote que acompanha o aluno todos os dias — para
+            transformar rotina de estudo em hábito.
+          </p>
+          <ul class="product-features">
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Trilhas por concurso e por matéria</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Mascote com XP, vidas e evolução diária</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Simulados cronometrados com gabarito real</li>
+            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Flash cards, suporte integrado e versão web</li>
+          </ul>
+          <div class="product-meta">
+            <span>Grátis para começar</span><i></i><span>Web + iOS + Android</span><i></i><span>PRO a partir de R$ 29,17/mês</span>
+          </div>
+          <a href="https://www.keyu.app.br" target="_blank" rel="noopener" class="btn btn-primary keyu-btn" data-cursor>
+            Visitar keyu.app.br<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="product-visual reveal" style="transition-delay:.1s">
+          <div class="pv-glow keyu-glow"></div>
+          <div class="pv-card keyu-card">
+            <img src="assets/keyu.webp" alt="Keyu" />
+            <div class="pv-overlay keyu-overlay"></div>
+            <div class="pv-ui">
+              <div class="pv-ui-top"><span>Português · Fase 2</span><span class="pv-hearts">♥ ♥ ♥ ♡</span></div>
+              <div class="pv-ui-xp"><div class="pv-ui-xp-label"><span>1.240 XP</span></div><div class="pv-ui-xp-track"><i style="width:72%"></i></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <a href="index.html" class="footer-logo" data-cursor>
+        <svg viewBox="0 0 100 100" width="30" height="30"><path d="M20 78V22l30 34 30-34v56" stroke="#ff7a1a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>MAGMAX<em>SYSTEMS</em></span>
+      </a>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <a href="sobre.html" data-cursor>Sobre</a>
+          <a href="servicos.html" data-cursor>Serviços</a>
+          <a href="contato.html" data-cursor>Contato</a>
+        </div>
+        <div class="footer-col">
+          <h4>Produtos</h4>
+          <a href="keyu.html" data-cursor>Keyu</a>
+          <a href="captacione.html" data-cursor>Captacione</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Magmax Systems. Todos os direitos reservados.</span>
+      <span>Feito com engenharia própria — como tudo aqui.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/circuit.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

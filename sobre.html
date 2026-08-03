@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sobre — Magmax Systems</title>
+<meta name="description" content="A Magmax Systems é um estúdio de software que desenha, desenvolve e opera seus próprios produtos digitais." />
+<meta name="theme-color" content="#050a16" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2308080a'/%3E%3Cpath d='M20 78V22l30 34 30-34v56' stroke='%23ff7a1a' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<canvas id="circuitBg"></canvas>
+
+<svg class="noise-defs" width="0" height="0">
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter>
+</svg>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav id="nav" class="nav-solid">
+  <a href="index.html" class="nav-logo" data-cursor>
+    <svg viewBox="0 0 100 100" width="26" height="26"><path d="M20 78V22l30 34 30-34v56" stroke="#ff7a1a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>MAGMAX<em>SYSTEMS</em></span>
+  </a>
+  <div class="nav-links">
+    <a href="sobre.html" data-cursor>Sobre</a>
+    <a href="produtos.html" data-cursor>Produtos</a>
+    <a href="servicos.html" data-cursor>Serviços</a>
+    <a href="contato.html" data-cursor>Contato</a>
+  </div>
+  <a href="contato.html" class="nav-cta" data-cursor>Fale com a gente</a>
+  <button class="nav-burger" id="navBurger" aria-label="Abrir menu">
+    <span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="sobre.html" data-cursor>Sobre</a>
+  <a href="produtos.html" data-cursor>Produtos</a>
+  <a href="servicos.html" data-cursor>Serviços</a>
+  <a href="contato.html" data-cursor>Contato</a>
+</div>
+
+<main>
+  <section class="section about" style="padding-top:clamp(7rem,13vw,10rem)">
+    <div class="section-inner about-grid">
+      <div class="about-media reveal">
+        <img src="https://picsum.photos/seed/magmax-team-11/1000/1300" alt="Equipe Magmax Systems" />
+        <div class="about-media-frame"></div>
+      </div>
+      <div class="about-copy">
+        <div class="sec-tag reveal">A empresa</div>
+        <h2 class="sec-title reveal" style="transition-delay:.05s">Um estúdio que constrói<br>e opera os próprios produtos.</h2>
+        <p class="sec-text reveal" style="transition-delay:.1s">
+          A Magmax Systems nasceu para ir além do código sob encomenda. Desenhamos, desenvolvemos e operamos
+          aplicações que resolvem problemas reais — do primeiro commit ao suporte ao usuário final. Hoje mantemos
+          dois produtos próprios em produção, construídos com a mesma disciplina de engenharia que aplicamos em
+          qualquer projeto que assinamos.
+        </p>
+        <p class="sec-text reveal" style="transition-delay:.15s">
+          Isso muda a forma como trabalhamos: cada decisão técnica é testada primeiro nos nossos próprios produtos,
+          com usuários reais, antes de virar prática recomendada para quem trabalha com a gente.
+        </p>
+        <div class="about-stats reveal" style="transition-delay:.2s">
+          <div class="astat"><strong>02</strong><span>Produtos SaaS<br>próprios em produção</span></div>
+          <div class="astat"><strong>100%</strong><span>Código, produto<br>e operação internos</span></div>
+          <div class="astat"><strong>Web·iOS·Android</strong><span>Um só time,<br>todas as plataformas</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-section">
+    <div class="quote-bg"><img src="https://picsum.photos/seed/magmax-quote-9/1920/1080" alt="" /></div>
+    <div class="quote-overlay"></div>
+    <blockquote class="reveal">
+      “Software bom não é o que sai no dia do lançamento.<br>
+      É o que continua funcionando <span>— e melhorando —</span><br>
+      um ano depois.”
+      <cite>Magmax Systems</cite>
+    </blockquote>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <a href="index.html" class="footer-logo" data-cursor>
+        <svg viewBox="0 0 100 100" width="30" height="30"><path d="M20 78V22l30 34 30-34v56" stroke="#ff7a1a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>MAGMAX<em>SYSTEMS</em></span>
+      </a>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <a href="sobre.html" data-cursor>Sobre</a>
+          <a href="servicos.html" data-cursor>Serviços</a>
+          <a href="contato.html" data-cursor>Contato</a>
+        </div>
+        <div class="footer-col">
+          <h4>Produtos</h4>
+          <a href="keyu.html" data-cursor>Keyu</a>
+          <a href="captacione.html" data-cursor>Captacione</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Magmax Systems. Todos os direitos reservados.</span>
+      <span>Feito com engenharia própria — como tudo aqui.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/circuit.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

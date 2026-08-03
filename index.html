@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Magmax Systems — Estúdio de software</title>
+<meta name="description" content="A Magmax Systems desenha, desenvolve e opera produtos digitais próprios. Conheça o Keyu e a Captacione." />
+<meta name="theme-color" content="#050a16" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2308080a'/%3E%3Cpath d='M20 78V22l30 34 30-34v56' stroke='%23ff7a1a' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- fundo de circuito animado -->
+<canvas id="circuitBg"></canvas>
+
+<!-- grain overlay -->
+<svg class="noise-defs" width="0" height="0">
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter>
+</svg>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- preloader -->
+<div class="preloader" id="preloader">
+  <div class="preloader-mark">
+    <svg viewBox="0 0 100 100" width="46" height="46"><path d="M20 78V22l30 34 30-34v56" stroke="#ff7a1a" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+  <div class="preloader-word">MAGMAX&nbsp;SYSTEMS</div>
+  <div class="preloader-bar"><span id="preloaderFill"></span></div>
+</div>
+
+<!-- custom cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<main>
+
+  <!-- ============ HERO — MURAL DISPERSO (página inteira) ============ -->
+  <section class="scatter-hero" id="hero">
+
+    <div class="scatter-field" id="scatterField">
+      <a href="keyu.html" class="scatter-tile port real" data-cursor>
+        <span class="tile-img"><img src="assets/keyu.webp" alt="Keyu" loading="lazy" /></span>
+        <span class="tile-cap"><span class="tile-name">Keyu</span><span class="tile-desc">App gamificado</span></span>
+      </a>
+      <a href="captacione.html" class="scatter-tile land real" data-cursor>
+        <span class="tile-img"><img src="assets/hero-bg.webp" alt="Captacione" loading="lazy" /><span class="card-wordmark">Captacione</span></span>
+        <span class="tile-cap"><span class="tile-name">Captacione</span><span class="tile-desc">Fomento por CNPJ</span></span>
+      </a>
+      <a href="sobre.html" class="scatter-tile land" data-cursor>
+        <span class="tile-img text-tile"><span class="tile-wordmark">Empresa</span></span>
+        <span class="tile-cap"><span class="tile-name">Quem somos</span><span class="tile-desc">A empresa por trás</span></span>
+      </a>
+      <a href="contato.html" class="scatter-tile land" data-cursor>
+        <span class="tile-img text-tile"><span class="tile-wordmark">Contato</span></span>
+        <span class="tile-cap"><span class="tile-name">Contato</span><span class="tile-desc">Vamos conversar</span></span>
+      </a>
+      <a href="produtos.html" class="scatter-tile land" data-cursor>
+        <span class="tile-img text-tile"><span class="tile-wordmark">Produtos</span></span>
+        <span class="tile-cap"><span class="tile-name">Produtos</span><span class="tile-desc">Keyu &amp; Captacione</span></span>
+      </a>
+      <a href="servicos.html" class="scatter-tile land" data-cursor>
+        <span class="tile-img text-tile"><span class="tile-wordmark">Serviços</span></span>
+        <span class="tile-cap"><span class="tile-name">Serviços</span><span class="tile-desc">O que fazemos</span></span>
+      </a>
+    </div>
+
+    <div class="scatter-center">
+      <div class="scatter-title">
+        <span class="st-main">MAGMAX <span class="st-sys">SYSTEMS</span></span>
+        <span class="st-sub">ESTÚDIO DE SOFTWARE</span>
+      </div>
+    </div>
+
+    <div class="scatter-corner">Magmax Systems&reg; — estúdio de software</div>
+  </section>
+
+</main>
+
+<script src="js/circuit.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

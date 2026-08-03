@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Produtos — Magmax Systems</title>
+<meta name="description" content="Conheça o Keyu e a Captacione, os dois produtos SaaS desenhados, desenvolvidos e operados pela Magmax Systems." />
+<meta name="theme-color" content="#050a16" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2308080a'/%3E%3Cpath d='M20 78V22l30 34 30-34v56' stroke='%23ff7a1a' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<canvas id="circuitBg"></canvas>
+
+<svg class="noise-defs" width="0" height="0">
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter>
+</svg>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav id="nav" class="nav-solid">
+  <a href="index.html" class="nav-logo" data-cursor>
+    <svg viewBox="0 0 100 100" width="26" height="26"><path d="M20 78V22l30 34 30-34v56" stroke="#ff7a1a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>MAGMAX<em>SYSTEMS</em></span>
+  </a>
+  <div class="nav-links">
+    <a href="sobre.html" data-cursor>Sobre</a>
+    <a href="produtos.html" data-cursor>Produtos</a>
+    <a href="servicos.html" data-cursor>Serviços</a>
+    <a href="contato.html" data-cursor>Contato</a>
+  </div>
+  <a href="contato.html" class="nav-cta" data-cursor>Fale com a gente</a>
+  <button class="nav-burger" id="navBurger" aria-label="Abrir menu">
+    <span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="sobre.html" data-cursor>Sobre</a>
+  <a href="produtos.html" data-cursor>Produtos</a>
+  <a href="servicos.html" data-cursor>Serviços</a>
+  <a href="contato.html" data-cursor>Contato</a>
+</div>
+
+<main>
+  <section class="section products" style="padding-top:clamp(7rem,13vw,10rem)">
+    <div class="section-inner">
+      <div class="products-head">
+        <div class="sec-tag reveal">Produtos</div>
+        <h2 class="sec-title reveal" style="transition-delay:.05s">O que construímos</h2>
+        <p class="sec-sub reveal" style="transition-delay:.1s">Dois produtos SaaS desenhados, desenvolvidos e operados de ponta a ponta pela Magmax Systems.</p>
+      </div>
+
+      <div class="products-hub-grid">
+        <a href="keyu.html" class="hub-card reveal" data-cursor>
+          <div class="hub-card-visual">
+            <img src="assets/keyu.webp" alt="Keyu" />
+            <div class="pv-overlay keyu-overlay"></div>
+          </div>
+          <div class="hub-card-body">
+            <div class="product-tag keyu-tag">EdTech · App gamificado</div>
+            <h3>Keyu</h3>
+            <p>Trilhas gamificadas, mascote, simulados cronometrados e flash cards para quem estuda para concursos públicos.</p>
+            <span class="hub-card-cta">Ver detalhes<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+
+        <a href="captacione.html" class="hub-card reveal" style="transition-delay:.1s" data-cursor>
+          <div class="hub-card-visual">
+            <img src="assets/hero-bg.webp" alt="Captacione" />
+            <div class="pv-overlay capt-overlay"></div>
+            <span class="card-wordmark">Captacione</span>
+          </div>
+          <div class="hub-card-body">
+            <div class="product-tag capt-tag">Fintech · GovTech</div>
+            <h3>Captacione</h3>
+            <p>Diagnóstico gratuito por CNPJ que mostra a quais programas de crédito, subvenção e incentivo sua empresa se qualifica.</p>
+            <span class="hub-card-cta">Ver detalhes<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <a href="index.html" class="footer-logo" data-cursor>
+        <svg viewBox="0 0 100 100" width="30" height="30"><path d="M20 78V22l30 34 30-34v56" stroke="#ff7a1a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>MAGMAX<em>SYSTEMS</em></span>
+      </a>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <a href="sobre.html" data-cursor>Sobre</a>
+          <a href="servicos.html" data-cursor>Serviços</a>
+          <a href="contato.html" data-cursor>Contato</a>
+        </div>
+        <div class="footer-col">
+          <h4>Produtos</h4>
+          <a href="keyu.html" data-cursor>Keyu</a>
+          <a href="captacione.html" data-cursor>Captacione</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Magmax Systems. Todos os direitos reservados.</span>
+      <span>Feito com engenharia própria — como tudo aqui.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/circuit.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
