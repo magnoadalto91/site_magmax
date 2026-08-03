@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Magmax Systems — Estúdio de software</title>
-<meta name="description" content="A Magmax Systems desenha, desenvolve e opera produtos digitais próprios. Conheça o Keyu e a Captacione." />
+<meta name="robots" content="noindex, nofollow" />
+<title>Magmax Systems — Em breve</title>
+<meta name="description" content="O site da Magmax Systems está em construção. Voltamos em breve." />
 <meta name="theme-color" content="#050a16" />
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://picsum.photos https://fastly.picsum.photos data:; connect-src 'self'; base-uri 'self'; object-src 'none'" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -14,28 +15,15 @@
 <meta property="og:site_name" content="Magmax Systems" />
 <meta property="og:locale" content="pt_BR" />
 <meta property="og:url" content="https://magmax.dev.br/" />
-<meta property="og:title" content="Magmax Systems — Estúdio de software" />
-<meta property="og:description" content="A Magmax Systems desenha, desenvolve e opera produtos digitais próprios. Conheça o Keyu e a Captacione." />
+<meta property="og:title" content="Magmax Systems — Em breve" />
+<meta property="og:description" content="O site da Magmax Systems está em construção. Voltamos em breve." />
 <meta property="og:image" content="https://magmax.dev.br/assets/Logo/logo_completo.webp" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Magmax Systems — Estúdio de software" />
-<meta name="twitter:description" content="A Magmax Systems desenha, desenvolve e opera produtos digitais próprios. Conheça o Keyu e a Captacione." />
+<meta name="twitter:title" content="Magmax Systems — Em breve" />
+<meta name="twitter:description" content="O site da Magmax Systems está em construção. Voltamos em breve." />
 <meta name="twitter:image" content="https://magmax.dev.br/assets/Logo/logo_completo.webp" />
 
 <link rel="icon" type="image/png" href="assets/Logo/icone.png" />
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Magmax Systems",
-  "alternateName": "Magmax",
-  "url": "https://magmax.dev.br/",
-  "description": "A Magmax Systems desenha, desenvolve e opera produtos digitais próprios — incluindo o Keyu e a Captacione.",
-  "logo": "https://magmax.dev.br/assets/Logo/logo_completo.webp",
-  "email": "contato@magmaxsystems.com.br"
-}
-</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -45,70 +33,23 @@
 </head>
 <body>
 
-<!-- fundo de circuito animado -->
 <canvas id="circuitBg"></canvas>
 
-<!-- grain overlay -->
 <svg class="noise-defs" width="0" height="0">
   <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter>
 </svg>
 <div class="grain" aria-hidden="true"></div>
 
-<!-- preloader -->
-<div class="preloader" id="preloader">
-  <div class="preloader-mark">
-    <img src="assets/Logo/icone.png" alt="Magmax Systems" width="46" height="46" />
-  </div>
-  <div class="preloader-word">MAGMAX&nbsp;SYSTEMS</div>
-  <div class="preloader-bar"><span id="preloaderFill"></span></div>
-</div>
-
-<!-- custom cursor -->
 <div class="cursor-dot" id="cursorDot"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<main>
-
-  <!-- ============ HERO — MURAL DISPERSO (página inteira) ============ -->
-  <section class="scatter-hero" id="hero">
-
-    <div class="scatter-field" id="scatterField">
-      <a href="keyu.html" class="scatter-tile port real" data-cursor>
-        <span class="tile-img"><img src="assets/keyu.webp" alt="Keyu" loading="lazy" /></span>
-        <span class="tile-cap"><span class="tile-name">Keyu</span><span class="tile-desc">App gamificado</span></span>
-      </a>
-      <a href="captacione.html" class="scatter-tile land real" data-cursor>
-        <span class="tile-img"><img src="assets/hero-bg.webp" alt="Captacione" loading="lazy" /><span class="card-wordmark">Captacione</span></span>
-        <span class="tile-cap"><span class="tile-name">Captacione</span><span class="tile-desc">Fomento por CNPJ</span></span>
-      </a>
-      <a href="sobre.html" class="scatter-tile land" data-cursor>
-        <span class="tile-img text-tile"><span class="tile-wordmark">Empresa</span></span>
-        <span class="tile-cap"><span class="tile-name">Quem somos</span><span class="tile-desc">A empresa por trás</span></span>
-      </a>
-      <a href="contato.html" class="scatter-tile land" data-cursor>
-        <span class="tile-img text-tile"><span class="tile-wordmark">Contato</span></span>
-        <span class="tile-cap"><span class="tile-name">Contato</span><span class="tile-desc">Vamos conversar</span></span>
-      </a>
-      <a href="produtos.html" class="scatter-tile land" data-cursor>
-        <span class="tile-img text-tile"><span class="tile-wordmark">Produtos</span></span>
-        <span class="tile-cap"><span class="tile-name">Produtos</span><span class="tile-desc">Keyu &amp; Captacione</span></span>
-      </a>
-      <a href="servicos.html" class="scatter-tile land" data-cursor>
-        <span class="tile-img text-tile"><span class="tile-wordmark">Serviços</span></span>
-        <span class="tile-cap"><span class="tile-name">Serviços</span><span class="tile-desc">O que fazemos</span></span>
-      </a>
-    </div>
-
-    <div class="scatter-center">
-      <div class="scatter-title">
-        <span class="st-main">MAGMAX <span class="st-sys">SYSTEMS</span></span>
-        <span class="st-sub">ESTÚDIO DE SOFTWARE</span>
-      </div>
-    </div>
-
-    <div class="scatter-corner">Magmax Systems&reg; — estúdio de software</div>
-  </section>
-
+<main class="maintenance">
+  <div class="maintenance-inner">
+    <img src="assets/Logo/icone.png" alt="Magmax Systems" class="maintenance-logo" width="72" height="72" />
+    <h1 class="maintenance-title">MAGMAX <span>SYSTEMS</span></h1>
+    <p class="maintenance-text">Estamos preparando algo novo.<br>O site volta em breve.</p>
+    <a href="mailto:contato@magmaxsystems.com.br" class="maintenance-contact" data-cursor>contato@magmaxsystems.com.br</a>
+  </div>
 </main>
 
 <script src="js/circuit.js"></script>
