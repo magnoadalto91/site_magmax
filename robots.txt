@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://magmax.dev.br/sitemap.xml
+Sitemap: https://magmaxsystems.com.br/sitemap.xml
