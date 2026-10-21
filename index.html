@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Magmax Systems — Estúdio de software</title>
 <meta name="description" content="A Magmax Systems desenha, desenvolve e opera produtos digitais próprios. Conheça o Keyu e a Captacione." />
-<meta name="theme-color" content="#050a16" />
+<meta name="theme-color" content="#1a1745" />
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://picsum.photos https://fastly.picsum.photos data:; connect-src 'self'; base-uri 'self'; object-src 'none'" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <link rel="canonical" href="https://magmaxsystems.com.br/" />
@@ -56,11 +56,10 @@
 
 <!-- preloader -->
 <div class="preloader" id="preloader">
-  <div class="preloader-mark">
-    <img src="assets/Logo/icone.png" alt="Magmax Systems" width="46" height="46" />
-  </div>
-  <div class="preloader-word">MAGMAX&nbsp;SYSTEMS</div>
+  <div class="preloader-glow" aria-hidden="true"></div>
+  <img class="preloader-logo" src="assets/Logo/logo_web.webp" alt="Magmax Systems" width="800" height="522" />
   <div class="preloader-bar"><span id="preloaderFill"></span></div>
+  <div class="preloader-tag">Carregando&hellip;</div>
 </div>
 
 <!-- custom cursor -->
@@ -73,8 +72,9 @@
   <section class="scatter-hero" id="hero">
 
     <div class="scatter-field" id="scatterField">
-      <a class="scatter-tile port real soon">
-        <span class="tile-img"><img src="assets/keyu.webp" alt="Keyu" loading="lazy" /><span class="tile-soon">Em breve</span></span>
+      <a href="keyu.html" class="scatter-tile port real" data-cursor>
+        <span class="tile-img"><img src="assets/keyu.webp" alt="Keyu" loading="lazy" /></span>
+        <span class="tile-cap"><span class="tile-name">Keyu</span><span class="tile-desc">App gamificado</span></span>
       </a>
       <a class="scatter-tile land real soon">
         <span class="tile-img"><img src="assets/hero-bg.webp" alt="Captacione" loading="lazy" /><span class="card-wordmark">Captacione</span><span class="tile-soon">Em breve</span></span>
@@ -87,8 +87,9 @@
         <span class="tile-img text-tile"><span class="tile-wordmark">Contato</span></span>
         <span class="tile-cap"><span class="tile-name">Contato</span><span class="tile-desc">Vamos conversar</span></span>
       </a>
-      <a class="scatter-tile land soon">
-        <span class="tile-img text-tile"><span class="tile-wordmark">Produtos</span><span class="tile-soon">Em breve</span></span>
+      <a href="produtos.html" class="scatter-tile land" data-cursor>
+        <span class="tile-img text-tile"><span class="tile-wordmark">Produtos</span></span>
+        <span class="tile-cap"><span class="tile-name">Produtos</span><span class="tile-desc">Keyu &amp; Captacione</span></span>
       </a>
       <a href="servicos.html" class="scatter-tile land" data-cursor>
         <span class="tile-img text-tile"><span class="tile-wordmark">Serviços</span></span>

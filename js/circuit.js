@@ -70,7 +70,11 @@
   function drawBuffer(w, h) {
     buffer.width = w;
     buffer.height = h;
-    bctx.fillStyle = '#050a16';
+    var g = bctx.createLinearGradient(0, 0, w, h);
+    g.addColorStop(0, '#1d1850');
+    g.addColorStop(0.5, '#2a1f66');
+    g.addColorStop(1, '#3a2060');
+    bctx.fillStyle = g;
     bctx.fillRect(0, 0, w, h);
 
     traces.forEach(function (tr) {
@@ -81,14 +85,14 @@
       bctx.lineJoin = 'round';
       bctx.lineCap = 'round';
       bctx.lineWidth = 1.3;
-      bctx.strokeStyle = tr.bright ? 'rgba(90,175,255,.26)' : 'rgba(50,105,185,.14)';
+      bctx.strokeStyle = tr.bright ? 'rgba(244,140,200,.34)' : 'rgba(140,130,235,.2)';
       bctx.stroke();
 
       tr.pts.forEach(function (p, i) {
         if (i === 0 || i === tr.pts.length - 1) return;
         bctx.beginPath();
         bctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-        bctx.fillStyle = 'rgba(90,170,250,.22)';
+        bctx.fillStyle = 'rgba(255,160,90,.3)';
         bctx.fill();
       });
 
@@ -96,7 +100,7 @@
       var last = tr.pts[tr.pts.length - 1];
       bctx.beginPath();
       bctx.arc(last.x, last.y, 2.6, 0, Math.PI * 2);
-      bctx.strokeStyle = 'rgba(120,195,255,.3)';
+      bctx.strokeStyle = 'rgba(255,170,110,.4)';
       bctx.lineWidth = 1;
       bctx.stroke();
     });
@@ -132,8 +136,8 @@
 
         var glow = ctx.createRadialGradient(pos.x, pos.y, 0, pos.x, pos.y, 9);
         glow.addColorStop(0, 'rgba(255,255,255,.9)');
-        glow.addColorStop(0.35, 'rgba(170,225,255,.45)');
-        glow.addColorStop(1, 'rgba(170,225,255,0)');
+        glow.addColorStop(0.35, 'rgba(255,190,140,.5)');
+        glow.addColorStop(1, 'rgba(255,190,140,0)');
         ctx.fillStyle = glow;
         ctx.beginPath();
         ctx.arc(pos.x, pos.y, 9, 0, Math.PI * 2);
