@@ -9,7 +9,7 @@
   if (!pre || !fill) return; // páginas internas não têm preloader
   let p = 0;
   const timer = setInterval(() => {
-    p += Math.random() * 18 + 6;
+    p += Math.random() * 2.4 + 1.5;
     if (p >= 100) {
       p = 100;
       clearInterval(timer);
@@ -23,7 +23,7 @@
       return;
     }
     fill.style.width = p + '%';
-  }, 140);
+  }, 120);
   document.body.style.overflow = 'hidden';
 })();
 
