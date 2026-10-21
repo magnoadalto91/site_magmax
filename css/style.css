@@ -77,7 +77,7 @@ button{font:inherit;background:none;border:none;color:inherit}
   filter:blur(30px);animation:glow 3s ease-in-out infinite;
 }
 .preloader-logo{
-  position:relative;width:min(78vw,420px);height:auto;
+  position:relative;width:min(52vw,190px);height:auto;
   filter:drop-shadow(0 10px 40px rgba(244,114,182,.35));
   animation:logoIn 1s var(--ease) both, float 3.2s ease-in-out 1s infinite;
 }
