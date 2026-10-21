@@ -92,6 +92,15 @@ button{font:inherit;background:none;border:none;color:inherit}
 .preloader-bar{position:absolute;bottom:3.2vh;left:50%;transform:translateX(-50%);width:min(60vw,260px);height:4px;background:rgba(255,255,255,.16);overflow:hidden;border-radius:4px}
 .preloader-bar span{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--pink),var(--accent));border-radius:4px;transition:width .3s ease-out}
 
+.preloader-skip{
+  position:absolute;right:clamp(1rem,3vw,2.5rem);bottom:3vh;z-index:2;cursor:pointer;
+  font-family:var(--font-d);font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;
+  color:#fff;padding:.7rem 1.4rem;border-radius:999px;
+  background:linear-gradient(90deg,var(--pink),var(--accent));
+  box-shadow:0 0 22px rgba(244,114,182,.5);transition:transform .25s var(--ease),box-shadow .25s;
+}
+.preloader-skip:hover{transform:translateY(-2px);box-shadow:0 0 34px rgba(255,138,42,.7)}
+
 /* título do hero só aparece depois do preloader (o circuito do fundo fica visível nele) */
 .scatter-hero:not(.in) .scatter-center,.scatter-hero:not(.in) .scatter-corner{opacity:0}
 .scatter-center,.scatter-corner{transition:opacity .8s var(--ease) .3s}

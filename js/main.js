@@ -8,22 +8,27 @@
   const fill = document.getElementById('preloaderFill');
   if (!pre || !fill) return; // páginas internas não têm preloader
   let p = 0;
+  const enter = () => {
+    clearInterval(timer);
+    pre.classList.add('done');
+    const hero = document.getElementById('hero');
+    if (hero) hero.classList.add('in');
+    document.body.style.overflow = '';
+  };
   const timer = setInterval(() => {
     p += Math.random() * 2.4 + 1.5;
     if (p >= 100) {
       p = 100;
       clearInterval(timer);
       fill.style.width = '100%';
-      setTimeout(() => {
-        pre.classList.add('done');
-        const hero = document.getElementById('hero');
-        if (hero) hero.classList.add('in');
-        document.body.style.overflow = '';
-      }, 250);
+      // TEMPORÁRIO: com o botão "Avançar" na tela, só entra no clique (avaliar a arte com calma)
+      if (!skip) setTimeout(enter, 250);
       return;
     }
     fill.style.width = p + '%';
   }, 120);
+  const skip = document.getElementById('preloaderSkip');
+  if (skip) skip.addEventListener('click', enter);
   document.body.style.overflow = 'hidden';
 })();
 
